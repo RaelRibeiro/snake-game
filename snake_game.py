@@ -13,7 +13,7 @@ blue = (50, 153, 213)
 width = 600
 height = 400
 screen = pygame.display.set_mode((width, height))
-pygame.display.set_caption('🐍 Snake Game - by Rael')
+pygame.display.set_caption('Snake Game')
 
 clock = pygame.time.Clock()
 snake_block = 10
@@ -24,7 +24,7 @@ score_font = pygame.font.SysFont("comicsansms", 35)
 
 
 def your_score(score):
-    value = score_font.render("Pontuação: {score}", True, white)
+    value = score_font.render("Score: {score}", True, white)
     screen.blit(value, [0, 0])
 
 
@@ -51,7 +51,6 @@ def gameLoop():
     snake_list = []
     length_of_snake = 1
 
-    # Comida
     foodx = round(random.randrange(0, width - snake_block) / 10.0) * 10.0
     foody = round(random.randrange(0, height - snake_block) / 10.0) * 10.0
 
